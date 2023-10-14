@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Fallout hacking terminal minigame">
+		<title>Fallout RobCo Terminal</title>
+		<link rel="icon" href="assets/favicon.png" type="image/png" />
+		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="reset.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<div class="screen-wrapper">
+			<main>
+				<header>
+					<p>ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL</p>
+					<p id="term-status">ENTER PASSWORD NOW</p>
+				</header>
+				<section>
+					<p id="term-attempts">4 ATTEMPT(S) LEFT: ■ ■ ■ ■</p>
+				</section>
+				<section class="term-body">
+					<div class="term-entries">
+						<div>
+							<div id="point1" class="pointers"></div>
+							<div id="entries1" class="words"></div>
+						</div>
+						<div>
+							<div id="point2" class="pointers"></div>
+							<div id="entries2" class="words"></div>
+						</div>
+					</div>
+					<aside>
+						<p id="selected-word">> TERMS<span class="blink cursor">■</span></p>
+						<br />
+						<div id="term-history">
+							<div class="history-entry">
+								<span>>PRICE</span>
+								<span>>Entry denied</span>
+								<span>>0/5 correct</span>
+							</div>
+							<div class="history-entry">
+								<span>>TEXAS</span>
+								<span>>Entry denied</span>
+								<span>>2/5 correct</span>
+							</div>
+						</div>
+					</aside>
+				</section>
+			</main>
+		</div>
+		<footer>
+			<button id="volume-btn">Volumen</button>
+		</footer>
+	</body>
+</html>

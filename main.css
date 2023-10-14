@@ -1,0 +1,119 @@
+@font-face {
+	src: url("assets/Fixedsys Excelsior 3.01 Regular.ttf");
+	font-family: "Fixedsys";
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	font-family: "Fixedsys";
+	font-weight: 500;
+	font-size: 1.5rem;
+	color: #28ed82;
+	text-shadow: 4px 2px 5px rgba(79,230,144,0.51);	cursor: default;
+	margin: 1rem 0.5rem;
+}
+
+.screen-wrapper {
+	padding: 1rem 0;
+	width: 48rem;
+	background-color: black;
+	
+}
+
+pointers > span {
+	display: inline;
+	gap: 0.5rem;
+}
+
+.term-body {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+/* LEFT SIDE OF TERMINAL */
+.term-entries {
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
+	user-select: none;
+}
+
+.term-entries > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.term-entries > div > .pointers {
+	display: grid;
+	grid-template-columns: 1;
+	grid-template-rows: 16fr;
+}
+
+/* WORDS */
+.words {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(16, 1fr);
+	max-width: 12rem;
+}
+
+.highlight {
+	color: black;
+	background: #28ed82;
+}
+
+.blink {
+	animation: blink 1s step-end infinite;
+}
+
+.cursor {
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.2rem;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* RIGHT SIDE OF TERMINAL */
+aside {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 40%;
+}
+
+/* HISTORY */
+.term-history {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 100%;
+}
+
+.history-entry {
+	display: flex;
+	flex-direction: column;
+}
