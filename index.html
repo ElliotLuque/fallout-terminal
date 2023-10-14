@@ -3,16 +3,28 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Fallout hacking terminal minigame">
+		<meta name="description" content="Fallout hacking terminal minigame" />
 		<title>Fallout RobCo Terminal</title>
 		<link rel="icon" href="assets/favicon.png" type="image/png" />
 		<link rel="stylesheet" href="main.css" />
 		<link rel="stylesheet" href="reset.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"
+			integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 		<script src="main.js" defer></script>
 	</head>
 	<body>
 		<div class="screen-wrapper">
+			<div class="term-effects">
+				<div class="monitor-effect">
+					<div class="monitor-bar"></div>
+				</div>
+				<div class="monitor-lines"></div>
+				<div class="monitor-glow"></div>
+			</div>
 			<main>
 				<header>
 					<p>ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL</p>
@@ -52,7 +64,7 @@
 			</main>
 		</div>
 		<footer>
-			<button id="volume-btn">Volumen</button>
+			<button id="volume-btn">Activar idle</button>
 		</footer>
 	</body>
 </html>

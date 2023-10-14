@@ -7,27 +7,103 @@ body {
 	width: 100%;
 	height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 2rem;
 }
 
 main {
+	grid-column-start: 1;
+	grid-row-start: 1;
 	display: flex;
 	flex-direction: column;
 	gap: 1.2rem;
 	font-family: "Fixedsys";
 	font-weight: 500;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	color: #28ed82;
-	text-shadow: 4px 2px 5px rgba(79,230,144,0.51);	cursor: default;
+	text-shadow: 3px 1px 12px rgba(79, 230, 144, 0.51);
+	cursor: default;
 	margin: 1rem 0.5rem;
 }
 
 .screen-wrapper {
-	padding: 1rem 0;
-	width: 48rem;
-	background-color: black;
-	
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	border-radius: 2rem;
+	width: 51rem;
+	height: 40.5rem;
+	background: radial-gradient(
+		rgba(16, 54, 33, 1) 50%,
+		rgba(18, 64, 39, 1) 80%,
+		rgba(11, 38, 23, 1) 95%,
+		rgba(0, 0, 0, 1) 100%
+	);
+}
+
+.term-effects {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+
+.monitor-effect {
+	grid-column-start: 1;
+	grid-row-start: 1;
+	height: 36rem;
+	width: 100%;
+	animation: monitor-effect 6s linear infinite;
+}
+
+@keyframes monitor-effect {
+	30%,
+	100% {
+		opacity: 0;
+		transform: translate(0, 100%);
+	}
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+}
+
+.monitor-bar {
+	height: 2.8rem;
+	background: linear-gradient(
+		360deg,
+		rgba(34, 114, 70, 0.6) 15%,
+		rgba(55, 75, 64, 0) 100%
+	);
+}
+
+.monitor-lines {
+	grid-column-start: 1;
+	grid-row-start: 1;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		180deg,
+		rgba(16, 54, 33, 0.7) 25%,
+		rgba(18, 64, 39, 0.7) 25%,
+		rgba(18, 64, 39, 0.7) 50%,
+		rgba(16, 54, 33, 0.7) 50%,
+		rgba(16, 54, 33, 0.7) 75%,
+		rgba(18, 64, 39, 0.7) 75%,
+		rgba(18, 64, 39, 0.7) 100%
+	);
+	background-size: 12px 12px;
+}
+
+.monitor-glow {
+	width: 100%;
+	height: 100%;
 }
 
 pointers > span {
@@ -38,6 +114,7 @@ pointers > span {
 .term-body {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	gap: 1rem;
 }
 
